@@ -1,0 +1,5 @@
+#!/bin/bash
+export ROOT=/
+export CBUILD=$(grep CHOST= /etc/portage/make.conf/*|cut -d= -f2)
+export HOSTCC=$CBUILD
+emerge "$@"

@@ -1,0 +1,3 @@
+* build gdb statically linked
+* build gdb with lzma and fix related linkage error
+* build cross-toolchains with glibc 2.5

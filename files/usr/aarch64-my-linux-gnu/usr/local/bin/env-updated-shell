@@ -1,0 +1,4 @@
+set -e
+env-update
+source /etc/profile
+"$@"

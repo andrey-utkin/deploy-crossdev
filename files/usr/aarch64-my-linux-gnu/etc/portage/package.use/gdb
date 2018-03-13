@@ -1,0 +1,7 @@
+sys-devel/gdb expat vanilla
+#sys-devel/gdb expat lzma vanilla
+#FIXME
+#gdb/config.log:
+# 11796:configure:16080: aarch64-unknown-linux-gnu-gcc -o conftest -O2 -pipe -fomit-frame-pointer  -static-libstdc++ -static-libgcc -Wl,-O1 -Wl,--as-needed conftest.c -ldl -ldl -lncursesw -lm -ldl  /usr/lib64/liblzma.so -Wl,-rpath -Wl,/usr/lib64 >&5
+# 11797:/usr/libexec/gcc/aarch64-unknown-linux-gnu/ld: skipping incompatible /lib64/liblzma.so.5 when searching for /lib64/liblzma.so.5
+# 11798:/usr/libexec/gcc/aarch64-unknown-linux-gnu/ld: cannot find /lib64/liblzma.so.5

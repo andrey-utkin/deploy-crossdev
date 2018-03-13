@@ -1,0 +1,3 @@
+#apparently breaks native gcc compilation
+#TODO reinstate just for needed libs individually
+#USE="${USE} static-libs"

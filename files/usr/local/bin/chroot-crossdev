@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+
+rc-service qemu-binfmt start
+
+DIR="$1"
+cd "$DIR"
+shift
+
+mkdir -p proc dev sys usr/portage
+
+mount -t proc none proc
+mount -o bind /dev dev
+mount -o bind /usr/portage usr/portage
+mount -o bind /sys sys
+cp -L /etc/resolv.conf etc/resolv.conf
+
+set +e
+chroot . usr/local/bin/env-updated-shell "$@"
+RET=$?
+
+umount sys
+umount usr/portage
+umount dev
+umount proc
+
+exit $RET
